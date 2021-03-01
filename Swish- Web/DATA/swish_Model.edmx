@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="swishModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="S_Avatar">
+          <Key>
+            <PropertyRef Name="level" />
+          </Key>
+          <Property Name="level" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="image" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="S_ConditionPrices">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="condition" Type="nvarchar" MaxLength="15" />
+          <Property Name="reduction" Type="int" />
+        </EntityType>
+        <EntityType Name="S_DailySentence">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sentence" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="S_ItemPrice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" />
+          <Property Name="price" Type="int" />
+        </EntityType>
+        <EntityType Name="S_ItemWorth">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="condition" Type="nvarchar" MaxLength="50" />
+          <Property Name="type" Type="nvarchar" MaxLength="30" />
+          <Property Name="numberOfPoints" Type="int" />
+        </EntityType>
+        <EntityType Name="S_User">
+          <Key>
+            <PropertyRef Name="phoneNumber" />
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="phoneNumber" Type="int" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="profilePicture" Type="nvarchar(max)" />
+          <Property Name="residence" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="radius" Type="int" Nullable="false" />
+          <Property Name="birthDate" Type="datetime" />
+          <Property Name="itemViewingMethod" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="swishModelStoreContainer">
+          <EntitySet Name="S_Avatar" EntityType="Self.S_Avatar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_ConditionPrices" EntityType="Self.S_ConditionPrices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_DailySentence" EntityType="Self.S_DailySentence" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_ItemPrice" EntityType="Self.S_ItemPrice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_ItemWorth" EntityType="Self.S_ItemWorth" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_User" EntityType="Self.S_User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="swishModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="S_Avatar">
+          <Key>
+            <PropertyRef Name="level" />
+          </Key>
+          <Property Name="level" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="S_ConditionPrices">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="condition" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="reduction" Type="Int32" />
+        </EntityType>
+        <EntityType Name="S_DailySentence">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sentence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="S_ItemPrice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Int32" />
+        </EntityType>
+        <EntityType Name="S_ItemWorth">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="condition" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="numberOfPoints" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="swishDBContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="S_Avatar" EntityType="Self.S_Avatar" />
+          <EntitySet Name="S_ConditionPrices" EntityType="Self.S_ConditionPrices" />
+          <EntitySet Name="S_DailySentence" EntityType="Self.S_DailySentence" />
+          <EntitySet Name="S_ItemPrice" EntityType="Self.S_ItemPrice" />
+          <EntitySet Name="S_ItemWorth" EntityType="Self.S_ItemWorth" />
+          <EntitySet Name="S_User" EntityType="swishModel.S_User" />
+        </EntityContainer>
+        <EntityType Name="S_User">
+          <Key>
+            <PropertyRef Name="phoneNumber" />
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="phoneNumber" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="profilePicture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="residence" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="radius" Type="Int32" Nullable="false" />
+          <Property Name="birthDate" Type="DateTime" Precision="3" />
+          <Property Name="itemViewingMethod" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="swishModelStoreContainer" CdmEntityContainer="swishDBContext">
+          <EntitySetMapping Name="S_Avatar">
+            <EntityTypeMapping TypeName="swishModel.S_Avatar">
+              <MappingFragment StoreEntitySet="S_Avatar">
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="image" ColumnName="image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_ConditionPrices">
+            <EntityTypeMapping TypeName="swishModel.S_ConditionPrices">
+              <MappingFragment StoreEntitySet="S_ConditionPrices">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="condition" ColumnName="condition" />
+                <ScalarProperty Name="reduction" ColumnName="reduction" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_DailySentence">
+            <EntityTypeMapping TypeName="swishModel.S_DailySentence">
+              <MappingFragment StoreEntitySet="S_DailySentence">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sentence" ColumnName="sentence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_ItemPrice">
+            <EntityTypeMapping TypeName="swishModel.S_ItemPrice">
+              <MappingFragment StoreEntitySet="S_ItemPrice">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_ItemWorth">
+            <EntityTypeMapping TypeName="swishModel.S_ItemWorth">
+              <MappingFragment StoreEntitySet="S_ItemWorth">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="condition" ColumnName="condition" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="numberOfPoints" ColumnName="numberOfPoints" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_User">
+            <EntityTypeMapping TypeName="swishModel.S_User">
+              <MappingFragment StoreEntitySet="S_User">
+                <ScalarProperty Name="itemViewingMethod" ColumnName="itemViewingMethod" />
+                <ScalarProperty Name="birthDate" ColumnName="birthDate" />
+                <ScalarProperty Name="radius" ColumnName="radius" />
+                <ScalarProperty Name="residence" ColumnName="residence" />
+                <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

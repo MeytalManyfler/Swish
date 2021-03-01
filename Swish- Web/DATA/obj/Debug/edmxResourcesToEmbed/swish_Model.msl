@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="swishModelStoreContainer" CdmEntityContainer="swishDBContext">
+    <EntitySetMapping Name="S_Avatar">
+      <EntityTypeMapping TypeName="swishModel.S_Avatar">
+        <MappingFragment StoreEntitySet="S_Avatar">
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_ConditionPrices">
+      <EntityTypeMapping TypeName="swishModel.S_ConditionPrices">
+        <MappingFragment StoreEntitySet="S_ConditionPrices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="condition" ColumnName="condition" />
+          <ScalarProperty Name="reduction" ColumnName="reduction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_DailySentence">
+      <EntityTypeMapping TypeName="swishModel.S_DailySentence">
+        <MappingFragment StoreEntitySet="S_DailySentence">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sentence" ColumnName="sentence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_ItemPrice">
+      <EntityTypeMapping TypeName="swishModel.S_ItemPrice">
+        <MappingFragment StoreEntitySet="S_ItemPrice">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_ItemWorth">
+      <EntityTypeMapping TypeName="swishModel.S_ItemWorth">
+        <MappingFragment StoreEntitySet="S_ItemWorth">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="condition" ColumnName="condition" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="numberOfPoints" ColumnName="numberOfPoints" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_User">
+      <EntityTypeMapping TypeName="swishModel.S_User">
+        <MappingFragment StoreEntitySet="S_User">
+          <ScalarProperty Name="itemViewingMethod" ColumnName="itemViewingMethod" />
+          <ScalarProperty Name="birthDate" ColumnName="birthDate" />
+          <ScalarProperty Name="radius" ColumnName="radius" />
+          <ScalarProperty Name="residence" ColumnName="residence" />
+          <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

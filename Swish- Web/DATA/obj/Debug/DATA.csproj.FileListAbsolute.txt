@@ -1,0 +1,12 @@
+D:\final project- Swish\git swish\Swish- Web\DATA\bin\Debug\DATA.dll.config
+D:\final project- Swish\git swish\Swish- Web\DATA\bin\Debug\DATA.dll
+D:\final project- Swish\git swish\Swish- Web\DATA\bin\Debug\DATA.pdb
+D:\final project- Swish\git swish\Swish- Web\DATA\bin\Debug\EntityFramework.dll
+D:\final project- Swish\git swish\Swish- Web\DATA\bin\Debug\EntityFramework.SqlServer.dll
+D:\final project- Swish\git swish\Swish- Web\DATA\bin\Debug\EntityFramework.xml
+D:\final project- Swish\git swish\Swish- Web\DATA\bin\Debug\EntityFramework.SqlServer.xml
+D:\final project- Swish\git swish\Swish- Web\DATA\obj\Debug\DATA.csprojAssemblyReference.cache
+D:\final project- Swish\git swish\Swish- Web\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
+D:\final project- Swish\git swish\Swish- Web\DATA\obj\Debug\DATA.csproj.CopyComplete
+D:\final project- Swish\git swish\Swish- Web\DATA\obj\Debug\DATA.dll
+D:\final project- Swish\git swish\Swish- Web\DATA\obj\Debug\DATA.pdb
